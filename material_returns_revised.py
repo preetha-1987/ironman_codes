@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 import os
 import pandas as pd
 import numpy as np
@@ -127,4 +121,3 @@ netted_results_project = pd.read_parquet(f'{primary_dir}/netted_results_project.
 netted_results_cost = pd.read_parquet(f'{primary_dir}/netted_results_cost.parquet.gzip')
 netted_all = pd.concat([netted_results_orders, netted_results_project, netted_results_cost])
 cleaning_tools.save_parquet(netted_all, 'netted_all.parquet.gzip', index=False, save_dir = primary_dir)
-
