@@ -121,4 +121,4 @@ netted_results_orders = pd.read_parquet(f'{primary_dir}/netted_results_orders.pa
 netted_results_project = pd.read_parquet(f'{primary_dir}/netted_results_project.parquet.gzip')
 netted_results_cost = pd.read_parquet(f'{primary_dir}/netted_results_cost.parquet.gzip')
 netted_all = pd.concat([netted_results_orders, netted_results_project, netted_results_cost])
-cleaning_tools.save_parquet(netted_all, 'netted_all.parquet.gzip', index=False, save_dir = primary_dir)
+cleaning_tools.save_parquet(netted_all, 'material_target_netted.parquet.gzip', index=False, save_dir = primary_dir)
