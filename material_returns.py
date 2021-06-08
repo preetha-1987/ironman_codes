@@ -79,6 +79,7 @@ def process_df_function(df):
 def read_in_data():
     materials_target = pd.read_parquet(f'{primary_dir}/material_target_with_returns.parquet.gzip')
     movement_type_subset = materials_target[materials_target.movement_type_inventory_management.isin([m1, m2])]
+    return movement_type_subset
 
     
 def Main():
